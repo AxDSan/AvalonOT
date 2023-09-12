@@ -47,9 +47,9 @@ uint64_t Scheduler::addEvent(const std::shared_ptr<Task> task) {
 			}
 
 			if (task->hasTraceableContext()) {
-				g_logger().trace("Dispatching scheduled task {}.", task->getContext());
+				//g_logger().trace("Dispatching scheduled task {}.", task->getContext());
 			} else {
-				g_logger().debug("Dispatching scheduled task {}.", task->getContext());
+				//g_logger().debug("Dispatching scheduled task {}.", task->getContext());
 			}
 
 			g_dispatcher().addTask(task);

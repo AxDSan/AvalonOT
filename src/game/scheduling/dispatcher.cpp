@@ -38,9 +38,9 @@ void Dispatcher::addTask(const std::shared_ptr<Task> task, uint32_t expiresAfter
 		std::lock_guard lockClass(threadSafetyMutex);
 
 		if (task->hasTraceableContext()) {
-			g_logger().trace("Executing task {}.", task->getContext());
+			//g_logger().trace("Executing task {}.", task->getContext());
 		} else {
-			g_logger().debug("Executing task {}.", task->getContext());
+			//g_logger().debug("Executing task {}.", task->getContext());
 		}
 
 		++dispatcherCycle;
